@@ -4,7 +4,6 @@ import './App.scss';
 
 function App() {
     const [visiblePopup, setVisiblePopup] = useState(false)
-    console.log(document.body.style.backgroundColor)
   return (
     <div className="app">
         <div className='color'>
