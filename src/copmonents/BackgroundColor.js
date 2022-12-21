@@ -4,10 +4,15 @@ import close from './../close.svg'
 import './BackgroundColor.scss'
 
 const BackgroundColor = () => {
-    const [hexColor, setHexColor] = useState()
+    const [hexColor, setHexColor] = useState('')
 
-    const changeColor = () => {
-        document.body.style.backgroundColor = generateHex()
+    const changeColor = (hex) => {
+        document.body.style.backgroundColor = hex
+        if (hex === '#ffffff') {
+            setHexColor('')
+        } else {
+            setHexColor(hex)
+        }
     }
 
     const generateHex = () => {
@@ -15,7 +20,7 @@ const BackgroundColor = () => {
         for(let i=0;i<6;i++) {
             hexColor += hex[Math.floor((Math.random() * hex.length))]
         }
-        setHexColor(hexColor)
+        changeColor(hexColor)
         return hexColor
     }
 
@@ -23,15 +28,15 @@ const BackgroundColor = () => {
         <div>
             <div  className='changeColor'>
                 <button className='buttonChange'
-                    onClick={()=>changeColor()}>
+                    onClick={()=>generateHex()}>
                     Change color
                 </button>
-                <img
+                {hexColor && <img
                     className='closeColor'
-                    // onClick={closeColor}
+                    onClick={()=>changeColor('#ffffff')}
                     src={close}
                     alt="close"
-                />
+                />}
             </div>
             <div className='hexColor'>
                 {hexColor}
