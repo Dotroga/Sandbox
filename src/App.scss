@@ -26,8 +26,10 @@ button {
   border: 0;
   padding: 9px 20px;
   cursor: pointer;
+  transition: 0.3s;
   &:hover {
    background: darken(#333232, 3%);
+    transition: 0.3s;
  }
   &:active {
     background: darken(#333232, 10%);

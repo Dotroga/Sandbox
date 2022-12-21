@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import hex from './../Hex'
+import close from './../close.svg'
 import './BackgroundColor.scss'
 
 const BackgroundColor = () => {
@@ -19,11 +20,19 @@ const BackgroundColor = () => {
     }
 
     return (
-        <div >
-            <button className='changeColor'
+        <div>
+            <div  className='changeColor'>
+                <button className='buttonChange'
                     onClick={()=>changeColor()}>
-                Change color
-            </button>
+                    Change color
+                </button>
+                <img
+                    className='closeColor'
+                    // onClick={closeColor}
+                    src={close}
+                    alt="close"
+                />
+            </div>
             <div className='hexColor'>
                 {hexColor}
             </div>

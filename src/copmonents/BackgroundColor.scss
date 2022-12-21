@@ -1,8 +1,37 @@
 .changeColor {
+  $self: &;
   position: absolute;
+  display: flex;
   top: 0;
   right: 0;
   margin: 15px;
+
+  &:hover {
+    img {
+      transition-duration: 1s;
+      transition-timing-function: ease;
+      transform: translateX(-40px);
+      z-index: 0;
+    }
+  }
+  img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    background-color: #323132;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: -1;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    &:hover {
+      background: darken(#333232, 3%);
+    }
+    &:active {
+      background: darken(#333232, 10%);
+    }
+  }
 }
 .hexColor {
   position: absolute;
