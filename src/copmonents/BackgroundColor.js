@@ -5,13 +5,15 @@ import './BackgroundColor.scss'
 
 const BackgroundColor = () => {
     const [hexColor, setHexColor] = useState('')
-
+    const [counter, setСounter] = useState(0)
     const changeColor = (hex) => {
         document.body.style.backgroundColor = hex
         if (hex === '#ffffff') {
             setHexColor('')
+            setСounter(0)
         } else {
             setHexColor(hex)
+            setСounter(() => counter + 1)
         }
     }
 
@@ -37,6 +39,10 @@ const BackgroundColor = () => {
                     src={close}
                     alt="close"
                 />}
+                {counter < 10 ? '' :
+                    <div className='counter'>
+                        {counter}
+                    </div>}
             </div>
             <div className='hexColor'>
                 {hexColor}

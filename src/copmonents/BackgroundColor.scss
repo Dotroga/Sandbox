@@ -5,7 +5,7 @@
   top: 0;
   right: 0;
   margin: 15px;
-
+  text-align: center;
   &:hover {
     img {
       transition-duration: 1s;
@@ -32,6 +32,14 @@
       background: darken(#333232, 10%);
     }
   }
+ .counter {
+   position: absolute;
+   width: 130px;
+   margin-top: 10px;
+   font-family: 'Passions Conflict', cursive;
+   font-size: 120px;
+   z-index: -1;
+ }
 }
 .hexColor {
   position: absolute;
