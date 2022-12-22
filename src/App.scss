@@ -35,7 +35,15 @@ button {
     background: darken(#333232, 10%);
   }
 }
-
+a {
+  text-decoration: none;
+  color: #b0361f;
+  transition: 1s;
+  font-weight: bold;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
 
 
 

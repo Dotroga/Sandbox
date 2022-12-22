@@ -18,6 +18,9 @@ function App() {
               <div className="info">
                   <p>Karpenkin Vasili</p>
                   <p>Course: Front-end Developer</p>
+                  <a href='https://www.codewars.com/users/Dotroga'
+                     target='_blank'
+                  >CodeWars</a>
               </div>}
       </header>
     </div>
